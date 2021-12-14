@@ -32,7 +32,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
         <?php include('tpl_header.php') ?>
 
         <div class="wrapper group">
-
+            <?php tpl_searchform(); ?>
             <?php if($showSidebar): ?>
                 <!-- ********** ASIDE ********** -->
                 <div id="dokuwiki__aside"><div class="pad aside include group">
@@ -72,11 +72,11 @@ $showSidebar = $hasSidebar && ($ACT=='show');
                 <div class="tools">
                     <ul>
                         <?php echo (new \dokuwiki\Menu\PageMenu())->getListItems(); ?>
+                        <?php echo (new \dokuwiki\Menu\UserMenu())->getListItems(); ?>
                     </ul>
                 </div>
             </div>
         </div><!-- /wrapper -->
-
         <?php include('tpl_footer.php') ?>
     </div></div><!-- /site -->
 
